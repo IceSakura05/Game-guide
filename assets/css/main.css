@@ -1572,6 +1572,7 @@
 
 	body {
 		background: #fff;
+		
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1688,6 +1689,7 @@
 		font-weight: 300;
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
+		position: relative;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1773,6 +1775,7 @@
 
 	.align-center {
 		text-align: center;
+		padding-bottom: 30px
 	}
 
 	.align-right {
@@ -2894,6 +2897,10 @@
 		.wrapper.style2 {
 			background-color: #f2f2f2;
 			color: #a6a6a6;
+			background-image: url(../../images/ayaka.jpg); 	
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 
 			.wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
@@ -3049,6 +3056,7 @@
 
 			.wrapper.style2 ::-webkit-input-placeholder {
 				color: #999999 !important;
+				
 			}
 
 			.wrapper.style2 :-moz-placeholder {
@@ -3099,10 +3107,12 @@
 				border-color: rgba(0, 0, 0, 0.15);
 			}
 
-		.wrapper.style3 {
-			background-color: #000;
+
+		/* .wrapper.style3 {
+			background-color: rgba(0, 0, 0, 0,3);
+			
 			color: #bfbfbf;
-			background-image: url(../../images/bg.jpg);
+			background-image: url(../../images/genshin.jpg);
 			background-size: cover;
 			background-attachment: fixed;
 			background-position: center;
@@ -3373,7 +3383,7 @@
 				top: 0;
 				width: 100%;
 				z-index: 1;
-			}
+			} */
 
 		@media screen and (max-width: 1280px) {
 
@@ -3870,6 +3880,38 @@
 	}
 
 /* Menu */
+	#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+	}
+	#menu ul.sub-menus{
+		height: auto;
+		overflow: hidden;
+		width: 240px;
+		background: #444444;
+		position: absolute;
+		z-index: 99;
+		display: none;
+		border-radius: 12px;
+	}
+	#menu ul.sub-menus li {
+		display: block;
+		width: 100%;
+	}
+	#menu ul.sub-menus a {
+		color: #FFFFFF;
+		text-decoration: none;
+		font-size: 16px;
+	}
+	#menu li:hover ul.sub-menus {
+		display: block
+	}
+	#menu ul.sub-menus a:hover{
+		background: #F2F2F2;
+		color: #444444;
+		position: relative;
+		border-radius: 5px;
+	}
 
 	#menu {
 		-moz-transform: translateX(20rem);
@@ -3884,6 +3926,7 @@
 		background: rgba(0, 0, 0, 0.95);
 		box-shadow: none;
 		color: #000;
+		opacity: 0.8;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -3920,7 +3963,7 @@
 					}
 
 						#menu > ul.links > li > a:not(.button):hover {
-							color: #FFF;
+							color: white;
 						}
 
 					#menu > ul.links > li > .button {
@@ -3940,7 +3983,7 @@
 			transition: color 0.2s ease-in-out;
 			-webkit-tap-highlight-color: transparent;
 			border: 0;
-			color: #999999;
+			color: white;
 			cursor: pointer;
 			display: block;
 			height: 3.25rem;
