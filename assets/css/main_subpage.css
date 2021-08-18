@@ -4526,3 +4526,8 @@
 	font-size: 1.25em;	
 	margin-top: 0.25em; 
 }
+
+iframe {
+	display: block;
+ 	 margin: auto;	
+}
